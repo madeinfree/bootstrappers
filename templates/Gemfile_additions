@@ -1,7 +1,7 @@
 gem "seo_helper", "~> 1.0.2"
 gem "open_graph_helper"
 
-gem "rmagick"
+#gem "rmagick"
 gem "carrierwave"
 gem "carrierwave-meta"
 
@@ -21,7 +21,7 @@ gem "rvm-capistrano"
 
 gem "omniauth"
 gem "omniauth-facebook"
-gem "auto-facebook", "0.4"
+gem "auto-facebook", "0.42"
 
 
 gem "whenever"

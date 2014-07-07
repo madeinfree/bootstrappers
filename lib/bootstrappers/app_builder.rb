@@ -14,7 +14,7 @@ module Bootstrappers
     end
 
     def add_devise_gem
-      inject_into_file 'Gemfile', "\ngem 'devise', '3.0.2'",
+      inject_into_file 'Gemfile', "\ngem 'devise', '3.2.4'",
       :after => /gem 'jquery-rails'/
     end
 
@@ -50,7 +50,7 @@ module Bootstrappers
     end
 
     def replace_email_sender_for_devise
-      replace_in_file 'config/initializers/devise.rb', /config\.mailer_sender = \".+\"/ , "config.mailer_sender = Setting.email_sender"
+      replace_in_file 'config/initializers/devise.rb', /config\.mailer_sender = \'.+\'/ , "config.mailer_sender = Setting.email_sender"
     end
 
     def gitignore_files
@@ -87,7 +87,7 @@ module Bootstrappers
 
 
     def remove_routes_comment_lines
-      replace_in_file 'config/routes.rb', /Application\.routes\.draw do.*end/m, "Application.routes.draw do\nend"
+      replace_in_file 'config/routes.rb', /Rails\.application\.routes\.draw do.*end/m, "Rails.application.routes.draw do\nend"
     end
 
     def use_mysql_config_template
